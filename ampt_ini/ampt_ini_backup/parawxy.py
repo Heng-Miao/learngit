@@ -44,7 +44,7 @@ def make_event( eventID = 0, dest='/DATA/data02/miaoheng/data/Ini_ppb_b0_20_5020
     parent = os.getcwd()
     home = '%s/event%s'%(dest,eventID)
     os.chdir( home )
-    call('./exec',shell=True)
+    call('sh exec',shell=True)
     os.chdir( parent )
 
 def collect( eventsID, fin = '../1' ,fou='../data2'):
