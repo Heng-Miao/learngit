@@ -1,0 +1,407 @@
+ 
+           ##################################################
+           #      AMPT (A Multi-Phase Transport) model      #
+           #               Version 2.21 (StringMelting)     #
+           #                10/01/2008                      #
+           ##################################################
+            
+ # Read in NSEED in HIJING at run time (e.g. 20030819):
+ #   read in:       111111
+
+
+          **************************************************
+          *     |      |       _______      /  ------/     *
+          *   ----- ------     |_____|     /_/     /       *
+          *    |||    /        |_____|      /    / |       *
+          *    /| |  /_/       /_______    /_  /    |      *
+          *   / |     / /     /  /  / |        -------     *
+          *     |    / /|       /  /  |     /     |        *
+          *     |   / /  |     /  /  _|    /   -------     *
+          *                                                *
+          **************************************************
+                                HIJING                      
+                 Heavy Ion Jet INteraction Generator        
+                                  by                        
+                      X. N. Wang  and  M. Gyulassy           
+                       Lawrence Berkeley Laboratory           
+
+
+     MDCY(C221,1)   changed from              1 to              0
+     MDCY(C313,1)   changed from              1 to              0
+     MDCY(C-313,1)  changed from              0 to              0
+     MDCY(C323,1)   changed from              1 to              0
+     MDCY(C-323,1)  changed from              0 to              0
+     MDCY(C311,1)   changed from              1 to              0
+     MDCY(C-311,1)  changed from              0 to              0
+     MDCY(C1114,1)  changed from              1 to              0
+     MDCY(C2114,1)  changed from              1 to              0
+     MDCY(C2214,1)  changed from              1 to              0
+     MDCY(C2224,1)  changed from              1 to              0
+     MDCY(C-1114,1) changed from              0 to              0
+     MDCY(C-2114,1) changed from              0 to              0
+     MDCY(C-2214,1) changed from              0 to              0
+     MDCY(C-2224,1) changed from              0 to              0
+     MDCY(C213,1)   changed from              1 to              0
+     MDCY(C-213,1)  changed from              0 to              0
+     MDCY(C113,1)   changed from              1 to              0
+     MDCY(C223,1)   changed from              1 to              0
+     MDCY(C333,1)   changed from              1 to              0
+     MDCY(C111,1)   changed from              1 to              0
+     MDCY(C310,1)   changed from              1 to              0
+     MDCY(C411,1)   changed from              1 to              0
+     MDCY(C-411,1)  changed from              0 to              0
+     MDCY(C421,1)   changed from              1 to              0
+     MDCY(C-421,1)  changed from              0 to              0
+     MDCY(C431,1)   changed from              1 to              0
+     MDCY(C-431,1)  changed from              0 to              0
+     MDCY(C511,1)   changed from              1 to              0
+     MDCY(C-511,1)  changed from              0 to              0
+     MDCY(C521,1)   changed from              1 to              0
+     MDCY(C-521,1)  changed from              0 to              0
+     MDCY(C531,1)   changed from              1 to              0
+     MDCY(C-531,1)  changed from              0 to              0
+     MDCY(C3122,1)  changed from              1 to              0
+     MDCY(C-3122,1) changed from              0 to              0
+     MDCY(C3112,1)  changed from              1 to              0
+     MDCY(C-3112,1) changed from              0 to              0
+     MDCY(C3212,1)  changed from              1 to              0
+     MDCY(C-3212,1) changed from              0 to              0
+     MDCY(C3222,1)  changed from              1 to              0
+     MDCY(C-3222,1) changed from              0 to              0
+     MDCY(C3312,1)  changed from              1 to              0
+     MDCY(C-3312,1) changed from              0 to              0
+     MDCY(C3322,1)  changed from              1 to              0
+     MDCY(C-3322,1) changed from              0 to              0
+     MDCY(C3334,1)  changed from              1 to              0
+     MDCY(C-3334,1) changed from              0 to              0
+
+
+          **********************************
+
+****************
+          *                                                *
+          *         HIJING has been initialized at         *
+          *             Ecm =    5020.00 GeV/n             *
+          *                                                *
+          *        for A   (208, 82) + A   (208, 82)       *
+          **************************************************
+  EVENT            1 , RUN            1
+ #impact parameter,nlop,ncolt=   15.5044174               0           0
+ #impact parameter,nlop,ncolt=   16.3739567               1           0
+ #impact parameter,nlop,ncolt=   19.9290104               2           0
+ #impact parameter,nlop,ncolt=   18.0851116               3           0
+ #impact parameter,nlop,ncolt=   19.9637413               4           0
+ #impact parameter,nlop,ncolt=   19.0344009               5           0
+ #impact parameter,nlop,ncolt=   15.3125277               6           0
+ #impact parameter,nlop,ncolt=   19.6585178               7           0
+ #impact parameter,nlop,ncolt=   18.6691532               8           0
+ #impact parameter,nlop,ncolt=   19.9394722               9           0
+ #impact parameter,nlop,ncolt=   18.6930294              10           0
+ #impact parameter,nlop,ncolt=   17.9447250              11           0
+ #impact parameter,nlop,ncolt=   17.2616940              12           0
+ #impact parameter,nlop,ncolt=   17.9851379              13           0
+ #impact parameter,nlop,ncolt=   17.4532490              14           0
+ #impact parameter,nlop,ncolt=   16.1786480              15           1
+
+ ******** PYMAXI: summary of differential cross-section maximum search ********
+
+           ==========================================================
+           I                                      I                 I
+           I  ISUB  Subprocess name               I  Maximum value  I
+           I                                      I                 I
+           ==========================================================
+           I                                      I                 I
+           I   11   f + f' -> f + f'              I    2.7748E+01   I
+           I   12   f + fb -> f' + fb'            I    2.9746E-02   I
+           I   13   f + fb -> g + g               I    3.9429E-01   I
+           I   14   f + fb -> g + gamma           I    5.3316E-03   I
+           I   18   f + fb -> gamma + gamma       I    2.4138E-05   I
+           I   28   f + g -> f + g                I    2.9237E+02   I
+           I   29   f + g -> f + gamma            I    1.8299E-01   I
+           I   53   g + g -> f + fb               I    2.8281E+00   I
+           I   68   g + g -> g + g                I    5.9235E+02   I
+           I   81   q + qb -> Q + QB, massive     I    2.1327E-02   I
+           I   82   g + g -> Q + QB, massive      I    2.4221E+00   I
+           I                                      I                 I
+           ==========================================================
+ event=           1
+ dn(           1 )=   0.0000000000000000      dn1(           1 )=   1.0000000000000000      dn2(           1 )=   1.0000000000000000     
+ event=           1
+ dn(           2 )=   0.0000000000000000      dn1(           2 )=   1.0000000000000000      dn2(           2 )=   1.0000000000000000     
+ satisfied:EATT,NATT,B=   1044194.75             516   16.1786480    
+  
+  EVENT            2 , RUN            1
+ #impact parameter,nlop,ncolt=   17.8436508               0           0
+ #impact parameter,nlop,ncolt=   18.5063400               1           0
+ #impact parameter,nlop,ncolt=   18.7789879               2           0
+ #impact parameter,nlop,ncolt=   18.7749081               3           0
+ #impact parameter,nlop,ncolt=   18.7292824               4           0
+ #impact parameter,nlop,ncolt=   19.5826149               5           0
+ #impact parameter,nlop,ncolt=   18.2639427               6           0
+ #impact parameter,nlop,ncolt=   15.8096342               7           1
+ event=           1
+ dn(           1 )=   0.0000000000000000      dn1(           1 )=   0.0000000000000000      dn2(           1 )=   0.0000000000000000     
+ event=           1
+ dn(           2 )=   0.0000000000000000      dn1(           2 )=   0.0000000000000000      dn2(           2 )=   0.0000000000000000     
+ event=           1
+ dn(           3 )=   0.0000000000000000      dn1(           3 )=   0.0000000000000000      dn2(           3 )=   0.0000000000000000     
+ event=           1
+ dn(           4 )=   0.0000000000000000      dn1(           4 )=   0.0000000000000000      dn2(           4 )=   0.0000000000000000     
+ satisfied:EATT,NATT,B=   1044146.62             555   15.8096342    
+  
+  EVENT            3 , RUN            1
+ #impact parameter,nlop,ncolt=   16.0647926               0           1
+ event=           1
+ dn(           1 )=   0.0000000000000000      dn1(           1 )=   0.0000000000000000      dn2(           1 )=   0.0000000000000000     
+ event=           1
+ dn(           2 )=   0.0000000000000000      dn1(           2 )=   0.0000000000000000      dn2(           2 )=   0.0000000000000000     
+ event=           1
+ dn(           3 )=   0.0000000000000000      dn1(           3 )=   0.0000000000000000      dn2(           3 )=   0.0000000000000000     
+  IN HJANA2, INDP STR          339  PART            1
+  FLAV =            1  PX =   -6.23930655E-02  PY =   0.133004665    
+  PZ =   -1436.11365      EE =    1436.11365    
+  XM =    9.89999995E-03
+  IN HJANA2, GLUON           51
+  FLAV =            1  PX =   -6.23930655E-02  PY =   0.133004665    
+  PZ =   -1436.11365      EE =    1436.11365    
+  XM =    9.89999995E-03
+ satisfied:EATT,NATT,B=   1044160.19             438   16.0647926    
+  
+  EVENT            4 , RUN            1
+ #impact parameter,nlop,ncolt=   17.8773289               0           0
+ #impact parameter,nlop,ncolt=   18.9662781               1           0
+ #impact parameter,nlop,ncolt=   17.5757580               2           0
+ #impact parameter,nlop,ncolt=   18.8064003               3           0
+ #impact parameter,nlop,ncolt=   19.2863674               4           0
+ #impact parameter,nlop,ncolt=   18.1512814               5           0
+ #impact parameter,nlop,ncolt=   19.2984505               6           0
+ #impact parameter,nlop,ncolt=   17.9887371               7           0
+ #impact parameter,nlop,ncolt=   18.3138523               8           0
+ #impact parameter,nlop,ncolt=   17.8100815               9           0
+ #impact parameter,nlop,ncolt=   16.9256306              10           0
+ #impact parameter,nlop,ncolt=   16.7430916              11           1
+  IN HJANA1, GLUON           52
+  FLAV =            1  PX =   -6.23930655E-02  PY =   0.133004665    
+  PZ =   -1436.11365      EE =    1436.11365    
+  XM =    9.89999995E-03
+ event=           1
+ dn(           1 )=   0.0000000000000000      dn1(           1 )=   0.0000000000000000      dn2(           1 )=   0.0000000000000000     
+ event=           1
+ dn(           2 )=   0.0000000000000000      dn1(           2 )=   0.0000000000000000      dn2(           2 )=   0.0000000000000000     
+ event=           1
+ dn(           3 )=   0.0000000000000000      dn1(           3 )=   0.0000000000000000      dn2(           3 )=   0.0000000000000000     
+ event=           1
+ dn(           4 )=   0.0000000000000000      dn1(           4 )=   0.0000000000000000      dn2(           4 )=   0.0000000000000000     
+ event=           1
+ dn(           5 )=   0.0000000000000000      dn1(           5 )=   0.0000000000000000      dn2(           5 )=   0.0000000000000000     
+  IN HJANA2, INDP STR          362  PART            3
+  FLAV =            1  PX =   -6.22170120E-02  PY =   0.117971122    
+  PZ =   -891.727905      EE =    891.727905    
+  XM =    9.89999995E-03
+  IN HJANA2, GLUON           89
+  FLAV =            1  PX =   -6.22170120E-02  PY =   0.117971122    
+  PZ =   -891.727905      EE =    891.727905    
+  XM =    9.89999995E-03
+ satisfied:EATT,NATT,B=   1044160.44             457   16.7430916    
+  
+  EVENT            5 , RUN            1
+ #impact parameter,nlop,ncolt=   19.3136921               0           0
+ #impact parameter,nlop,ncolt=   15.9711342               1           2
+  IN HJANA1, GLUON           35
+  FLAV =           -3  PX =    2.62170006E-02  PY =   -4.38225977E-02
+  PZ =    556.894775      EE =    556.894775    
+  XM =   0.199000001    
+  IN HJANA1, GLUON           90
+  FLAV =            1  PX =   -6.22170120E-02  PY =   0.117971122    
+  PZ =   -891.727905      EE =    891.727905    
+  XM =    9.89999995E-03
+ event=           1
+ dn(           1 )=   0.0000000000000000      dn1(           1 )=   0.0000000000000000      dn2(           1 )=   0.0000000000000000     
+ satisfied:EATT,NATT,B=   1044150.50             526   15.9711342    
+  
+  EVENT            6 , RUN            1
+ #impact parameter,nlop,ncolt=   16.4393864               0           0
+ #impact parameter,nlop,ncolt=   19.2909126               1           0
+ #impact parameter,nlop,ncolt=   17.9582558               2           0
+ #impact parameter,nlop,ncolt=   18.9662819               3           0
+ #impact parameter,nlop,ncolt=   15.4287949               4           0
+ #impact parameter,nlop,ncolt=   18.2671642               5           0
+ #impact parameter,nlop,ncolt=   15.5104456               6           0
+ #impact parameter,nlop,ncolt=   15.8094702               7           0
+ #impact parameter,nlop,ncolt=   18.3845387               8           0
+ #impact parameter,nlop,ncolt=   16.3009605               9           1
+ event=           1
+ dn(           1 )=   0.0000000000000000      dn1(           1 )=   0.0000000000000000      dn2(           1 )=   0.0000000000000000     
+ event=           1
+ dn(           2 )=   0.0000000000000000      dn1(           2 )=   0.0000000000000000      dn2(           2 )=   0.0000000000000000     
+ event=           1
+ dn(           3 )=   0.0000000000000000      dn1(           3 )=   0.0000000000000000      dn2(           3 )=   0.0000000000000000     
+ event=           1
+ dn(           4 )=   0.0000000000000000      dn1(           4 )=   1.0000000000000000      dn2(           4 )=   2.0000000000000000     
+ 2  -4.4909654168529375E-004   1.7079919671303989E-004 -0.99999989799722921        1.0000000268545381                            NaN
+ beta2=0.999999999999999
+ satisfied:EATT,NATT,B=   1044159.31             494   16.3009605    
+  
+  EVENT            7 , RUN            1
+ #impact parameter,nlop,ncolt=   17.9669876               0           0
+ #impact parameter,nlop,ncolt=   15.3243904               1           0
+ #impact parameter,nlop,ncolt=   15.4126377               2           1
+ event=           1
+ dn(           1 )=   0.0000000000000000      dn1(           1 )=   0.0000000000000000      dn2(           1 )=   0.0000000000000000     
+ event=           1
+ dn(           2 )=   0.0000000000000000      dn1(           2 )=   0.0000000000000000      dn2(           2 )=   0.0000000000000000     
+ event=           1
+ dn(           3 )=   0.0000000000000000      dn1(           3 )=   0.0000000000000000      dn2(           3 )=   0.0000000000000000     
+ event=           1
+ dn(           4 )=   0.0000000000000000      dn1(           4 )=   1.0000000000000000      dn2(           4 )=   4.0000000000000000     
+  IN HJANA2, INDP STR          366  PART            3
+  FLAV =            1  PX =   -1.47044724E-02  PY =  -0.236700654    
+  PZ =   -2219.07129      EE =    2219.07129    
+  XM =    9.89999995E-03
+  IN HJANA2, GLUON          134
+  FLAV =            1  PX =   -1.47044724E-02  PY =  -0.236700654    
+  PZ =   -2219.07129      EE =    2219.07129    
+  XM =    9.89999995E-03
+ satisfied:EATT,NATT,B=   1044151.88             483   15.4126377    
+  
+  EVENT            8 , RUN            1
+ #impact parameter,nlop,ncolt=   15.6875477               0           1
+  IN HJANA1, GLUON            4
+  FLAV =            2  PX =    3.98925431E-02  PY =   -5.94287328E-02
+  PZ =    242.943558      EE =    242.943558    
+  XM =    5.59999980E-03
+  IN HJANA1, GLUON           76
+  FLAV =            1  PX =   -1.47044724E-02  PY =  -0.236700654    
+  PZ =   -2219.07129      EE =    2219.07129    
+  XM =    9.89999995E-03
+ event=           1
+ dn(           1 )=   0.0000000000000000      dn1(           1 )=   0.0000000000000000      dn2(           1 )=   0.0000000000000000     
+ event=           1
+ dn(           2 )=   0.0000000000000000      dn1(           2 )=   0.0000000000000000      dn2(           2 )=   0.0000000000000000     
+ event=           1
+ dn(           3 )=   0.0000000000000000      dn1(           3 )=   0.0000000000000000      dn2(           3 )=   0.0000000000000000     
+ event=           1
+ dn(           4 )=   0.0000000000000000      dn1(           4 )=   2.0000000000000000      dn2(           4 )=   2.0000000000000000     
+ event=           1
+ dn(           5 )=   0.0000000000000000      dn1(           5 )=   3.0000000000000000      dn2(           5 )=   9.0000000000000000     
+ event=           1
+ dn(           6 )=   0.0000000000000000      dn1(           6 )=   4.0000000000000000      dn2(           6 )=   13.000000000000000     
+ event=           1
+ dn(           7 )=   0.0000000000000000      dn1(           7 )=   5.0000000000000000      dn2(           7 )=   13.000000000000000     
+ event=           1
+ dn(           8 )=   0.0000000000000000      dn1(           8 )=   5.0000000000000000      dn2(           8 )=   13.000000000000000     
+ event=           1
+ dn(           9 )=   0.0000000000000000      dn1(           9 )=   5.0000000000000000      dn2(           9 )=   13.000000000000000     
+ event=           1
+ dn(          10 )=   0.0000000000000000      dn1(          10 )=   5.0000000000000000      dn2(          10 )=   13.000000000000000     
+ event=           1
+ dn(          11 )=   0.0000000000000000      dn1(          11 )=   5.0000000000000000      dn2(          11 )=   13.000000000000000     
+ event=           1
+ dn(          12 )=   0.0000000000000000      dn1(          12 )=   5.0000000000000000      dn2(          12 )=   13.000000000000000     
+ satisfied:EATT,NATT,B=   1044158.31             481   15.6875477    
+  
+ IN HJANA4
+  PARTICLE          121  RUN            1 PREC ERR
+  FLAV =         -211  PX =   -3.78629565E-03  PY =    5.30990139E-02
+  PZ =    431.508301      EE =    431.508301    
+  XM =   0.139599994    
+ IN ARTAN2
+ PARTICLE          121  RUN            1 PREC ERR
+  FLAV =         -211  PX =   -3.78629565E-03  PY =    5.30990139E-02
+  PZ =    431.508301      EE =    431.508301    
+  XM =   0.139599994    
+  EVENT            9 , RUN            1
+ #impact parameter,nlop,ncolt=   15.2917223               0           6
+  IN HJANA2, INDP STR           43  PART            1
+  FLAV =            2  PX =   0.124307528      PY =   0.122697838    
+  PZ =    708.729126      EE =    708.729126    
+  XM =    5.59999980E-03
+  IN HJANA2, INDP STR           43  PART            3
+  FLAV =            1  PX =    3.81143205E-02  PY =    7.65279606E-02
+  PZ =    594.022644      EE =    594.022644    
+  XM =    9.89999995E-03
+  IN HJANA2, INDP STR           82  PART            3
+  FLAV =            1  PX =   0.177103534      PY =    6.95046335E-02
+  PZ =    1550.58643      EE =    1550.58643    
+  XM =    9.89999995E-03
+  IN HJANA2, INDP STR           85  PART            2
+  FLAV =            2  PX =    5.91444178E-03  PY =    7.49102095E-03
+  PZ =    323.114288      EE =    323.114288    
+  XM =    5.59999980E-03
+  IN HJANA2, INDP STR          196  PART            1
+  FLAV =            2  PX =    4.73805293E-02  PY =  -0.132230312    
+  PZ =    817.256531      EE =    817.256531    
+  XM =    5.59999980E-03
+  IN HJANA2, INDP STR          196  PART            2
+  FLAV =            1  PX =    8.84506945E-03  PY =    7.44626820E-02
+  PZ =    1317.11267      EE =    1317.11267    
+  XM =    9.89999995E-03
+  IN HJANA2, GLUON          576
+  FLAV =            2  PX =    5.91444178E-03  PY =    7.49102095E-03
+  PZ =    323.114288      EE =    323.114288    
+  XM =    5.59999980E-03
+  IN HJANA2, GLUON          578
+  FLAV =            1  PX =    8.84506945E-03  PY =    7.44626820E-02
+  PZ =    1317.11267      EE =    1317.11267    
+  XM =    9.89999995E-03
+  IN HJANA2, GLUON          580
+  FLAV =            2  PX =    4.73805293E-02  PY =  -0.132230312    
+  PZ =    817.256531      EE =    817.256531    
+  XM =    5.59999980E-03
+  IN HJANA2, GLUON          583
+  FLAV =            1  PX =   0.177103534      PY =    6.95046335E-02
+  PZ =    1550.58643      EE =    1550.58643    
+  XM =    9.89999995E-03
+  IN HJANA2, GLUON          588
+  FLAV =            1  PX =    3.81143205E-02  PY =    7.65279606E-02
+  PZ =    594.022644      EE =    594.022644    
+  XM =    9.89999995E-03
+  IN HJANA2, GLUON          590
+  FLAV =            2  PX =   0.124307528      PY =   0.122697838    
+  PZ =    708.729126      EE =    708.729126    
+  XM =    5.59999980E-03
+ satisfied:EATT,NATT,B=   1044381.81             696   15.2917223    
+  
+  EVENT           10 , RUN            1
+ #impact parameter,nlop,ncolt=   15.6844292               0           2
+  IN HJANA1, GLUON           51
+  FLAV =            2  PX =   0.124307528      PY =   0.122697838    
+  PZ =    708.729126      EE =    708.729126    
+  XM =    5.59999980E-03
+  IN HJANA1, GLUON           53
+  FLAV =            1  PX =    3.81143205E-02  PY =    7.65279606E-02
+  PZ =    594.022644      EE =    594.022644    
+  XM =    9.89999995E-03
+  IN HJANA1, GLUON           56
+  FLAV =            1  PX =   0.177103534      PY =    6.95046335E-02
+  PZ =    1550.58643      EE =    1550.58643    
+  XM =    9.89999995E-03
+  IN HJANA1, GLUON           58
+  FLAV =            2  PX =    5.91444178E-03  PY =    7.49102095E-03
+  PZ =    323.114288      EE =    323.114288    
+  XM =    5.59999980E-03
+  IN HJANA1, GLUON          229
+  FLAV =            2  PX =    4.73805293E-02  PY =  -0.132230312    
+  PZ =    817.256531      EE =    817.256531    
+  XM =    5.59999980E-03
+  IN HJANA1, GLUON          230
+  FLAV =            1  PX =    8.84506945E-03  PY =    7.44626820E-02
+  PZ =    1317.11267      EE =    1317.11267    
+  XM =    9.89999995E-03
+  in HJANA1 
+  total number of partons =           10
+  total number of gluons =            2
+  number of projectile strings =          208
+  number of target strings =          208
+  number of independent strings =            0
+  in HJANA2 
+  total number of partons =          232
+  total number of gluons =            0
+  number of projectile strings =          208
+  number of target strings =          208
+  number of independent strings =          521
+ satisfied:EATT,NATT,B=   1044153.06             571   15.6844292    
+  
+node2
+#  AMPT started at  2018年 11月 21日 星期三 15:03:36 CST
+#  AMPT Program finished at  2018年 11月 21日 星期三 15:03:38 CST
