@@ -16,7 +16,7 @@ def randn( nseed=11358913111, low=1, high=2E8):
     result=randint(low, high) 
     return result
 
-def copyfile(eventID = 0, dest='/DATA/data02/wuxy/data/Ini_ppb_b0_20_5020/data0'):
+def copyfile(eventID = 0, dest='/DATA/data02/miaoheng/data/Ini_ppb_b0_20_5020/data0'):
     parent = os.getcwd()
     home = '%s/event%s'%(dest,eventID)
     call(['cp', '-r', 'origin/', home])
