@@ -39,7 +39,7 @@ def copyfile(eventID = 0, dest='/DATA/data02/miaoheng/data/Ini_ppb_b0_20_5020/da
     open( 'input.ampt' , 'w').write( finpu )
     os.chdir( parent )
 
-def make_event( eventID = 0, dest='/DATA/data02/wuxy/data/Ini_ppb_b0_20_5020/data0' ):
+def make_event( eventID = 0, dest='/DATA/data02/miaoheng/data/Ini_ppb_b0_20_5020/data0' ):
     '''Submit ampt job with different random seed'''
     parent = os.getcwd()
     home = '%s/event%s'%(dest,eventID)
