@@ -13,19 +13,19 @@
 #define hbarc3  pow(0.1973269631f, 3.0f)
 #define coef    (M_PI_F*M_PI_F/30.0f) 
 
-incline real P(real eps, read_only image2d_t eos_table){
+inline real P(real eps, read_only image2d_t eos_table){
     return eps/3.0f;
 }
 
-incline real T(real eps, read_only image2d_t eos_table){
+inline real T(real eps, read_only image2d_t eos_table){
     return hbarc1*pow( (real)1.0f/(dof*coef)*eps/hbarc1, (real)0.25f );
 }
 
-incline real S(real eps, read_only image2d_t eos_table){
+inline real S(real eps, read_only image2d_t eos_table){
     return ( eps + P(eps, eos_table) )/fmax( (real)1.0E-10f, T(eps, eos_table) );
 }
 
-incline real CS2(real eps, read_only image2d_t eos_table){
+inline real CS2(real eps, read_only image2d_t eos_table){
     return 0.33333333f;
 }
 
